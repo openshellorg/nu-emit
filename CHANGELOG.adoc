@@ -1,0 +1,5 @@
+= Changelog
+
+== Unreleased
+
+* Initial scaffold: C header + minimal JSONL emitter stub, MIT, docs.

@@ -1,0 +1,15 @@
+*
+!.gitignore
+!README.adoc
+!README.md
+!CHANGELOG.adoc
+!LICENSE
+!include/
+!include/**
+!src/
+!src/**
+!examples/
+!examples/**
+!docs/
+!docs/**
+!Makefile

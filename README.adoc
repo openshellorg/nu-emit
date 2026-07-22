@@ -1,0 +1,54 @@
+= nu-emit
+:toc:
+
+Small libraries so apps can **emit structured rows** for Nushell without hand-writing JSON strings.
+
+== Why
+
+Nushell is happy if you print JSONL and pipe through `from json`. That still means every C programmer reinvents `fprintf(stdout, "{\"pid\": %d...}")` and gets the commas wrong at 2am.
+
+`nu-emit` is the boring fix: build a row in memory, call an API, flush. First target is **C**. Other languages can follow the same shape.
+
+This is the “DevX approved” path from the Nu-vs-pwsh discussion: a real emit API, not folklore.
+
+== Tiers (intentional)
+
+. **JSONL emit (this repo, v0)** — zero coupling to Nu's plugin protocol; works today with `./app | from json`
+. **Plugin protocol (later)** — MsgPack/JSON IPC for native plugins when you need typed *input* too
+
+Do not wait for a `libnushell.so` C ABI. Nu does not ship that, and chasing it before 1.0 is a trap.
+
+== C sketch
+
+[source,c]
+----
+#include "nu_emit.h"
+
+int main(void) {
+    nu_emit_row_begin();
+    nu_emit_field_str("status", "running");
+    nu_emit_field_i64("pid", 4012);
+    nu_emit_field_i64("memory_mb", 128);
+    nu_emit_row_end(); /* writes one JSON object + newline, fflush */
+    return 0;
+}
+----
+
+[source,nushell]
+----
+./my_c_app | from json | where memory_mb > 100
+----
+
+== Status
+
+Scaffold. Headers + tiny encoder stub first; harden escaping and types next.
+
+== Related
+
+* https://github.com/openshellorg/nu-require — require / relaunch under Nu
+* https://github.com/openshellorg/shell-architecture — thesis
+* https://www.nushell.sh/
+
+== License
+
+MIT

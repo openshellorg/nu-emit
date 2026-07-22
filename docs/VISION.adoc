@@ -1,0 +1,11 @@
+= Vision
+
+Nushell adoption dies in the gap between “just emit JSON” and “implement the plugin protocol.”
+
+Most apps only need outbound structure. Give them a small API:
+
+* rows / fields in memory
+* correct escaping
+* streaming flush
+
+Plugin IPC can come later for people who need Nu values *in*. Rust already has `nu-plugin`. C and friends need `nu-emit` first.
