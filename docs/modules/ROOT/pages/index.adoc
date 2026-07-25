@@ -1,0 +1,28 @@
+= nu-emit
+:description: Emit structured rows for Nushell without hand-writing JSON.
+
+Small libraries so apps can *emit structured rows* for Nushell without hand-writing JSON strings.
+
+== Why
+
+Nushell is happy if you print JSONL and pipe through `from json`.
+That still means every C programmer reinvents `fprintf(stdout, "{\"pid\": %d...}")` and gets the commas wrong at 2am.
+
+`nu-emit` is the boring fix: build a row in memory, call an API, flush.
+First target is *C*.
+Other languages can follow the same shape.
+
+This is the "DevX approved" path from the Nu-vs-pwsh discussion: a real emit API, not folklore.
+
+== In this component
+
+* xref:vision.adoc[Vision] — emit vs plugin protocol
+* xref:quick-start.adoc[C Quick Start] — row/field API sketch
+* xref:tiers.adoc[Emit Tiers] — JSONL now, plugin IPC later
+* xref:status.adoc[Status] — scaffold progress
+
+== Related
+
+* xref:nu-require::index.adoc[nu-require] — require / relaunch under Nu
+* xref:shell-architecture::index.adoc[shell-architecture] — thesis
+* https://www.nushell.sh/[Nushell]

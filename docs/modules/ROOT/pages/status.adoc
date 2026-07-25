@@ -1,0 +1,7 @@
+= Status
+:description: Current scaffold status for nu-emit.
+
+Scaffold.
+Headers + tiny encoder stub first; harden escaping and types next.
+
+Source: https://github.com/openshellorg/nu-emit

@@ -1,0 +1,23 @@
+= C Quick Start
+:description: Minimal C emit sketch for JSONL rows.
+
+[source,c]
+----
+#include "nu_emit.h"
+
+int main(void) {
+    nu_emit_row_begin();
+    nu_emit_field_str("status", "running");
+    nu_emit_field_i64("pid", 4012);
+    nu_emit_field_i64("memory_mb", 128);
+    nu_emit_row_end(); /* writes one JSON object + newline, fflush */
+    return 0;
+}
+----
+
+[source,nushell]
+----
+./my_c_app | from json | where memory_mb > 100
+----
+
+See xref:vision.adoc[Vision] for why this API exists instead of chasing a `libnushell.so` C ABI.

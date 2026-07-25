@@ -1,0 +1,8 @@
+= Emit Tiers
+:description: JSONL emit now; plugin protocol later.
+
+. *JSONL emit (this repo, v0)* — zero coupling to Nu's plugin protocol; works today with `./app | from json`
+. *Plugin protocol (later)* — MsgPack/JSON IPC for native plugins when you need typed *input* too
+
+Do not wait for a `libnushell.so` C ABI.
+Nu does not ship that, and chasing it before 1.0 is a trap.
