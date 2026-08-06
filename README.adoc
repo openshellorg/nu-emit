@@ -1,24 +1,52 @@
+ifndef::env-github[:icons: font]
+:toc: preamble
+:toclevels: 2
+:sectanchors:
+endif::[]
+
+ifndef::env-github[]
+image:https://img.shields.io/github/contributors/openshellorg/nu-emit.svg?style=for-the-badge[Contributors,link=https://github.com/openshellorg/nu-emit/graphs/contributors]
+image:https://img.shields.io/github/forks/openshellorg/nu-emit.svg?style=for-the-badge[Forks,link=https://github.com/openshellorg/nu-emit/network/members]
+image:https://img.shields.io/github/stars/openshellorg/nu-emit.svg?style=for-the-badge[Stars,link=https://github.com/openshellorg/nu-emit/stargazers]
+image:https://img.shields.io/github/issues/openshellorg/nu-emit.svg?style=for-the-badge[Issues,link=https://github.com/openshellorg/nu-emit/issues]
+image:https://img.shields.io/github/license/openshellorg/nu-emit.svg?style=for-the-badge[License,link=https://github.com/openshellorg/nu-emit/blob/main/LICENSE]
+endif::[]
+
+ifdef::env-github[]
+image:https://img.shields.io/github/contributors/openshellorg/nu-emit.svg?style=for-the-badge[Contributors]
+image:https://img.shields.io/github/forks/openshellorg/nu-emit.svg?style=for-the-badge[Forks]
+image:https://img.shields.io/github/stars/openshellorg/nu-emit.svg?style=for-the-badge[Stars]
+image:https://img.shields.io/github/issues/openshellorg/nu-emit.svg?style=for-the-badge[Issues]
+image:https://img.shields.io/github/license/openshellorg/nu-emit.svg?style=for-the-badge[License]
+endif::[]
+
 = nu-emit
-:toc:
+
+C-first API to emit Nushell-friendly structured rows (JSONL) without hand-rolled JSON strings.
+
+link:https://github.com/openshellorg/nu-emit/issues[Report Bug] ·
+link:https://github.com/openshellorg/nu-emit/issues[Request Feature]
+
+== About The Project
 
 Small libraries so apps can **emit structured rows** for Nushell without hand-writing JSON strings.
-
-== Why
 
 Nushell is happy if you print JSONL and pipe through `from json`. That still means every C programmer reinvents `fprintf(stdout, "{\"pid\": %d...}")` and gets the commas wrong at 2am.
 
 `nu-emit` is the boring fix: build a row in memory, call an API, flush. First target is **C**. Other languages can follow the same shape.
 
-This is the “DevX approved” path from the Nu-vs-pwsh discussion: a real emit API, not folklore.
+This is the "DevX approved" path from the Nu-vs-pwsh discussion: a real emit API, not folklore.
 
-== Tiers (intentional)
+=== Tiers (intentional)
 
 . **JSONL emit (this repo, v0)** — zero coupling to Nu's plugin protocol; works today with `./app | from json`
 . **Plugin protocol (later)** — MsgPack/JSON IPC for native plugins when you need typed *input* too
 
 Do not wait for a `libnushell.so` C ABI. Nu does not ship that, and chasing it before 1.0 is a trap.
 
-== C sketch
+== Usage
+
+=== C sketch
 
 [source,c]
 ----
@@ -39,11 +67,11 @@ int main(void) {
 ./my_c_app | from json | where memory_mb > 100
 ----
 
-== Status
+=== Status
 
 Scaffold. Headers + tiny encoder stub first; harden escaping and types next.
 
-== Related
+=== Related
 
 * https://github.com/openshellorg/nu-require — require / relaunch under Nu
 * https://github.com/openshellorg/shell-architecture — thesis
@@ -51,4 +79,11 @@ Scaffold. Headers + tiny encoder stub first; harden escaping and types next.
 
 == License
 
-MIT
+MIT — see link:LICENSE[].
+
+== Contact
+
+Open Shell Org — openshell@devcentr.org
+
+* Project: https://github.com/openshellorg/nu-emit
+* Site: https://openshellorg.github.io
