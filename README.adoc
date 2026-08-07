@@ -2,9 +2,29 @@ ifndef::env-github[:icons: font]
 :toc: preamble
 :toclevels: 2
 :sectanchors:
+
+ifdef::env-github[]
+++++
+<a id="readme-top"></a>
+<div align="center">
+<a href="https://github.com/openshellorg/nu-emit/graphs/contributors"><img src="https://img.shields.io/github/contributors/openshellorg/nu-emit.svg?style=for-the-badge" alt="Contributors"></a>
+<a href="https://github.com/openshellorg/nu-emit/network/members"><img src="https://img.shields.io/github/forks/openshellorg/nu-emit.svg?style=for-the-badge" alt="Forks"></a>
+<a href="https://github.com/openshellorg/nu-emit/stargazers"><img src="https://img.shields.io/github/stars/openshellorg/nu-emit.svg?style=for-the-badge" alt="Stars"></a>
+<a href="https://github.com/openshellorg/nu-emit/issues"><img src="https://img.shields.io/github/issues/openshellorg/nu-emit.svg?style=for-the-badge" alt="Issues"></a>
+<a href="https://github.com/openshellorg/nu-emit/blob/main/LICENSE"><img src="https://img.shields.io/github/license/openshellorg/nu-emit.svg?style=for-the-badge" alt="License"></a>
+<br />
+<h3 align="center">nu-emit</h3>
+<p align="center">
+C-first API to emit Nushell-friendly structured rows (JSONL) without hand-rolled JSON strings.<br />
+<a href="https://github.com/openshellorg/nu-emit/issues">Report Bug</a>
+&middot;
+<a href="https://github.com/openshellorg/nu-emit/issues">Request Feature</a>
+</p>
+</div>
+++++
 endif::[]
 
-[[readme-top]]
+ifndef::env-github[]
 image:https://img.shields.io/github/contributors/openshellorg/nu-emit.svg?style=for-the-badge[Contributors,link=https://github.com/openshellorg/nu-emit/graphs/contributors]
 image:https://img.shields.io/github/forks/openshellorg/nu-emit.svg?style=for-the-badge[Forks,link=https://github.com/openshellorg/nu-emit/network/members]
 image:https://img.shields.io/github/stars/openshellorg/nu-emit.svg?style=for-the-badge[Stars,link=https://github.com/openshellorg/nu-emit/stargazers]
@@ -17,6 +37,7 @@ C-first API to emit Nushell-friendly structured rows (JSONL) without hand-rolled
 
 link:https://github.com/openshellorg/nu-emit/issues[Report Bug] ·
 link:https://github.com/openshellorg/nu-emit/issues[Request Feature]
+endif::[]
 
 == About The Project
 
@@ -35,8 +56,9 @@ This is the "DevX approved" path from the Nu-vs-pwsh discussion: a real emit API
 
 Do not wait for a `libnushell.so` C ABI. Nu does not ship that, and chasing it before 1.0 is a trap.
 
-link:#readme-top[back to top]
-
+++++
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+++++
 == Usage
 
 === C sketch
@@ -70,14 +92,16 @@ Scaffold. Headers + tiny encoder stub first; harden escaping and types next.
 * https://github.com/openshellorg/shell-architecture — thesis
 * https://www.nushell.sh/
 
-link:#readme-top[back to top]
-
+++++
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+++++
 == License
 
 MIT — see link:LICENSE[].
 
-link:#readme-top[back to top]
-
+++++
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+++++
 == Contact
 
 Open Shell Org — openshell@devcentr.org
@@ -85,4 +109,6 @@ Open Shell Org — openshell@devcentr.org
 * Project: https://github.com/openshellorg/nu-emit
 * Site: https://openshellorg.github.io
 
-link:#readme-top[back to top]
+++++
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+++++
