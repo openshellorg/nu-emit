@@ -4,21 +4,12 @@ ifndef::env-github[:icons: font]
 :sectanchors:
 endif::[]
 
-ifndef::env-github[]
+[[readme-top]]
 image:https://img.shields.io/github/contributors/openshellorg/nu-emit.svg?style=for-the-badge[Contributors,link=https://github.com/openshellorg/nu-emit/graphs/contributors]
 image:https://img.shields.io/github/forks/openshellorg/nu-emit.svg?style=for-the-badge[Forks,link=https://github.com/openshellorg/nu-emit/network/members]
 image:https://img.shields.io/github/stars/openshellorg/nu-emit.svg?style=for-the-badge[Stars,link=https://github.com/openshellorg/nu-emit/stargazers]
 image:https://img.shields.io/github/issues/openshellorg/nu-emit.svg?style=for-the-badge[Issues,link=https://github.com/openshellorg/nu-emit/issues]
 image:https://img.shields.io/github/license/openshellorg/nu-emit.svg?style=for-the-badge[License,link=https://github.com/openshellorg/nu-emit/blob/main/LICENSE]
-endif::[]
-
-ifdef::env-github[]
-image:https://img.shields.io/github/contributors/openshellorg/nu-emit.svg?style=for-the-badge[Contributors]
-image:https://img.shields.io/github/forks/openshellorg/nu-emit.svg?style=for-the-badge[Forks]
-image:https://img.shields.io/github/stars/openshellorg/nu-emit.svg?style=for-the-badge[Stars]
-image:https://img.shields.io/github/issues/openshellorg/nu-emit.svg?style=for-the-badge[Issues]
-image:https://img.shields.io/github/license/openshellorg/nu-emit.svg?style=for-the-badge[License]
-endif::[]
 
 = nu-emit
 
@@ -43,6 +34,8 @@ This is the "DevX approved" path from the Nu-vs-pwsh discussion: a real emit API
 . **Plugin protocol (later)** — MsgPack/JSON IPC for native plugins when you need typed *input* too
 
 Do not wait for a `libnushell.so` C ABI. Nu does not ship that, and chasing it before 1.0 is a trap.
+
+link:#readme-top[back to top]
 
 == Usage
 
@@ -77,9 +70,13 @@ Scaffold. Headers + tiny encoder stub first; harden escaping and types next.
 * https://github.com/openshellorg/shell-architecture — thesis
 * https://www.nushell.sh/
 
+link:#readme-top[back to top]
+
 == License
 
 MIT — see link:LICENSE[].
+
+link:#readme-top[back to top]
 
 == Contact
 
@@ -87,3 +84,5 @@ Open Shell Org — openshell@devcentr.org
 
 * Project: https://github.com/openshellorg/nu-emit
 * Site: https://openshellorg.github.io
+
+link:#readme-top[back to top]
