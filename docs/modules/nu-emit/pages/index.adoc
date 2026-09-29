@@ -20,7 +20,7 @@ Other languages can follow the same shape.
 
 This is the "DevX approved" path from the Nu-vs-pwsh discussion: a real emit API, not folklore.
 
-== In this component
+== In this module
 
 * xref:vision.adoc[Vision] — emit vs plugin protocol
 * xref:quick-start.adoc[C Quick Start] — row/field API sketch
@@ -29,6 +29,6 @@ This is the "DevX approved" path from the Nu-vs-pwsh discussion: a real emit API
 
 == Related
 
-* xref:nu-require::index.adoc[nu-require] — require / relaunch under Nu
+* xref:nu-require:index.adoc[nu-require] — require / relaunch under Nu
 * xref:shell-architecture::index.adoc[shell-architecture] — thesis
 * https://www.nushell.sh/[Nushell]
