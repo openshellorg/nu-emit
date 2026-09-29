@@ -1,4 +1,4 @@
-* xref:index.adoc[Overview]
+* xref:index.adoc[nu-emit]
 * xref:vision.adoc[Vision]
 * xref:quick-start.adoc[C Quick Start]
 * xref:tiers.adoc[Emit Tiers]

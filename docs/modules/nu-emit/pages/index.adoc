@@ -1,7 +1,13 @@
 = nu-emit
 :description: Emit structured rows for Nushell without hand-writing JSON.
+:page-audience: developers integrating C or other native apps with Nushell
+:page-usage-context: concept overview for the nu-emit library in the Tools docs component
+:page-orig-author: OpenShellOrg
+:page-last-author: agent on behalf of Ryan Johnson
+:page-last-edited: 2026-09-29
 
-Small libraries so apps can *emit structured rows* for Nushell without hand-writing JSON strings.
+`nu-emit` is a small library (C first) that builds structured rows in memory and prints them as JSONL for Nushell (`from json`) so apps do not hand-roll escaped JSON strings.
+Outbound structure only; plugin IPC is a later tier.
 
 == Why
 

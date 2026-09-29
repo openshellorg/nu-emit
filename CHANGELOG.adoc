@@ -2,4 +2,5 @@
 
 == Unreleased
 
+* Docs: register Antora component `tools` with module `nu-emit`; cold-reader overview lede.
 * Initial scaffold: C header + minimal JSONL emitter stub, MIT, docs.
