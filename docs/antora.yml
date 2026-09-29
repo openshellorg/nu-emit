@@ -1,6 +1,6 @@
-name: nu-emit
-title: nu-emit
+name: tools
+title: Tools
 version: ~
-start_page: ROOT:index.adoc
+start_page: nu-emit:index.adoc
 nav:
-  - modules/ROOT/nav.adoc
+  - modules/nu-emit/nav.adoc
