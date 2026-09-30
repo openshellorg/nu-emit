@@ -2,5 +2,6 @@
 
 == Unreleased
 
+* Docs: nu-emit index page author attributes credit Ryan Johnson (AMDphreak).
 * Docs: register Antora component `tools` with module `nu-emit`; cold-reader overview lede; same-component xref to `nu-require`.
 * Initial scaffold: C header + minimal JSONL emitter stub, MIT, docs.
